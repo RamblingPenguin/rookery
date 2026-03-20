@@ -39,7 +39,7 @@
     </modules>
 
     <properties>
-        <revision>0.0.1</revision>
+        <revision>0.0.2</revision>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.release>25</maven.compiler.release>
         <maven.resolver.version>1.9.18</maven.resolver.version>

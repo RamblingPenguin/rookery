@@ -62,15 +62,11 @@ public class IsolatedRookeryContext implements RookeryContext {
     }
 
     @Override
-    public <T> List<T> getImplementationsOf(Class<T> serviceInterface) {
-        ensureOpen();
-        
-        // Target the ServiceLoader strictly at our isolated child layer.
-        ServiceLoader<T> loader = ServiceLoader.load(layer, serviceInterface);
-        return loader.stream()
-                .map(ServiceLoader.Provider::get)
-                .toList();
+    public ModuleLayer getLayer() {
+        return layer;
     }
+
+
 
     @Override
     public Optional<Class<?>> loadClass(String className) {
